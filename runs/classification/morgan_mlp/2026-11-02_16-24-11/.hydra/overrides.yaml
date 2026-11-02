@@ -1,0 +1,2 @@
+- model=morgan_mlp
+- task=classification

@@ -26,8 +26,12 @@ class AtomJEPAModel(nn.Module):
     def __init__(self, cfg, readout, n_targets, data_dir, device):
         super().__init__()
         self.cfg, self.folder = cfg, data_dir / 'conformers'
-        self.encoder = AtomJEPA.from_pretrained(cfg.checkpoint, device=device,
-                                                precision=cfg.precision, cuequivariance=False)
+        self.encoder = AtomJEPA.from_pretrained(
+            cfg.checkpoint, 
+            device=device,
+            precision=cfg.precision, 
+            cuequivariance=False
+        )
         self.encoder.set_grad_checkpointing(not cfg.freeze_encoder)
         self.encoder.requires_grad_(not cfg.freeze_encoder)
         self.readout = build_readout(readout, self.encoder.embedding_dim, n_targets).to(self.encoder.device)
