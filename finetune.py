@@ -98,6 +98,9 @@ def train_torch(cfg, train, val, targets, task, data, out):
     optimizer = torch.optim.AdamW(model.param_groups(), weight_decay=cfg.train.weight_decay)
     best = float('inf')
     for epoch in range(1, cfg.train.epochs + 1):
+
+        print(f"starting epoch {epoch}")
+
         model.train()
         loss_sum, observed = 0., 0
         for batch in train_loader:
