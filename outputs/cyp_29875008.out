@@ -1,0 +1,134 @@
+Tue Nov  3 00:11:31 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.196.07             Driver Version: 580.196.07     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           On  |   00000000:37:00.0 Off |                    0 |
+| N/A   34C    P0             26W /  250W |       0MiB /  16384MiB |      0%   E. Process |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+2.6.0+cu124 12.4
+[2026-11-03 00:12:14,209][httpx2][INFO] - HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+[2026-11-03 00:12:14,342][httpx2][INFO] - HTTP Request: HEAD https://huggingface.co/atom-jepa/atom-jepa/resolve/main/molecules/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-11-03 00:12:14,343][huggingface_hub.utils._http][WARNING] - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-11-03 00:12:14,365][httpx2][INFO] - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/atom-jepa/atom-jepa/8f7514f49693d836ca26dfe0bbae10880f75690b/molecules%2Fconfig.json?%2Fatom-jepa%2Fatom-jepa%2Fresolve%2Fmain%2Fmolecules%2Fconfig.json=&etag=%226cb64adb26de2e2cb428cebafd2d190e5456b443%22 "HTTP/1.1 200 OK"
+[2026-11-03 00:12:14,436][httpx2][INFO] - HTTP Request: GET https://huggingface.co/api/resolve-cache/models/atom-jepa/atom-jepa/8f7514f49693d836ca26dfe0bbae10880f75690b/molecules%2Fconfig.json?%2Fatom-jepa%2Fatom-jepa%2Fresolve%2Fmain%2Fmolecules%2Fconfig.json=&etag=%226cb64adb26de2e2cb428cebafd2d190e5456b443%22 "HTTP/1.1 200 OK"
+[2026-11-03 00:12:14,589][httpx2][INFO] - HTTP Request: HEAD https://huggingface.co/atom-jepa/atom-jepa/resolve/main/molecules/model.safetensors "HTTP/1.1 302 Found"
+[2026-11-03 00:12:14,979][httpx2][INFO] - HTTP Request: GET https://huggingface.co/api/models/atom-jepa/atom-jepa/xet-read-token/8f7514f49693d836ca26dfe0bbae10880f75690b "HTTP/1.1 200 OK"
+[atom-jepa] molecules: device=cuda, precision=fp32, cuequivariance=off, compile=off
+  we recommend compile=True for larger jobs
+{"epoch": 1, "train_loss": 0.865690486728815, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.732370173691261, "R2": 0.13528271327778973, "ST-RAE": 0.8670271357878526, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.5526065578428575, "R2": 0.27466317087685166, "ST-RAE": 0.6685299210333467, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6601799532527152, "R2": 0.032559375689465875, "ST-RAE": 0.978453426412234, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.6270700804787424, "R2": 0.42345572793997266, "ST-RAE": 0.5581315096026793, "n": 337}, "macro_ST-RAE": 0.7680354982090283}
+{"epoch": 2, "train_loss": 0.7232473538513992, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7064181676787848, "R2": 0.17154889052462674, "ST-RAE": 0.8367850463688963, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46894020099581457, "R2": 0.47469113845562394, "ST-RAE": 0.5711546154600339, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6533483745221202, "R2": 0.06467459517141083, "ST-RAE": 0.9656520342431636, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5512781205652891, "R2": 0.5607854017121661, "ST-RAE": 0.4854912865004843, "n": 337}, "macro_ST-RAE": 0.7147707456431445}
+{"epoch": 3, "train_loss": 0.6736080997723546, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7048294289379214, "R2": 0.2205101546221755, "ST-RAE": 0.8353797849197585, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.45903995078025245, "R2": 0.49004517526231584, "ST-RAE": 0.5527581493235223, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6481060501242677, "R2": 0.1447888169218804, "ST-RAE": 0.951934609758761, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5211959766969001, "R2": 0.5894822830934701, "ST-RAE": 0.46847278117081087, "n": 337}, "macro_ST-RAE": 0.7021363312932132}
+{"epoch": 4, "train_loss": 0.5863441014309658, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.6973799116786807, "R2": 0.21193091834735456, "ST-RAE": 0.8320800626562551, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4528680826082104, "R2": 0.5444223340025283, "ST-RAE": 0.5329117475928394, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.624595763545328, "R2": 0.19742772696554745, "ST-RAE": 0.9060770629424301, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5212701980217365, "R2": 0.6081879268148781, "ST-RAE": 0.46483864710120315, "n": 337}, "macro_ST-RAE": 0.6839768800731819}
+{"epoch": 5, "train_loss": 0.5337819372630727, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7116627793340466, "R2": 0.16971287637322674, "ST-RAE": 0.8373375207101792, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46750585671514866, "R2": 0.5159926689131662, "ST-RAE": 0.5745884462684947, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6392281995575303, "R2": 0.0865291846618389, "ST-RAE": 0.9257505316572052, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5360814714508741, "R2": 0.5746034934071835, "ST-RAE": 0.5207200302919887, "n": 337}, "macro_ST-RAE": 0.714599132231967}
+{"epoch": 6, "train_loss": 0.5055890047743273, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7576125900706682, "R2": 0.16594963611905955, "ST-RAE": 0.9248188275415595, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.45797784875855724, "R2": 0.5316706300342107, "ST-RAE": 0.5425366830040216, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6803726276671398, "R2": 0.1357334717160793, "ST-RAE": 1.0327652744652311, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5743646199785472, "R2": 0.5248411248339734, "ST-RAE": 0.5752411305052455, "n": 337}, "macro_ST-RAE": 0.7688404788790144}
+{"epoch": 7, "train_loss": 0.4345023991950558, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7755534444446174, "R2": 0.07643566817235059, "ST-RAE": 1.005839317984007, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46400224098496134, "R2": 0.5338638322803084, "ST-RAE": 0.5848733013749003, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.645499838189312, "R2": 0.0864253531382948, "ST-RAE": 0.9457433495403619, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5777085957555232, "R2": 0.5308161880053847, "ST-RAE": 0.5807624270207862, "n": 337}, "macro_ST-RAE": 0.7793045989800139}
+{"epoch": 8, "train_loss": 0.39922284005521275, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7481378017575689, "R2": 0.12167084867891276, "ST-RAE": 0.8975728921994495, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4699522975446988, "R2": 0.4729046448386237, "ST-RAE": 0.5845396329841497, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6153679488893915, "R2": 0.14104865867793948, "ST-RAE": 0.881750213543668, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5234201679050015, "R2": 0.5835904215029045, "ST-RAE": 0.44959313744255536, "n": 337}, "macro_ST-RAE": 0.7033639690424556}
+{"epoch": 9, "train_loss": 0.3738093180010551, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7414535024588828, "R2": 0.15455959589158175, "ST-RAE": 0.9260555512002108, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46120831512368005, "R2": 0.5239098001457823, "ST-RAE": 0.5889181247202349, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.653148817046269, "R2": 0.14593298992822046, "ST-RAE": 0.9629988519542843, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5268862859703521, "R2": 0.5806853189485344, "ST-RAE": 0.4953404656267688, "n": 337}, "macro_ST-RAE": 0.7433282483753747}
+{"epoch": 10, "train_loss": 0.3354528233054138, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7361161123631528, "R2": 0.1667462099539171, "ST-RAE": 0.8875980656749447, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46743131426126144, "R2": 0.5091325040657799, "ST-RAE": 0.5457763003234221, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6578073023991117, "R2": 0.11864817989129217, "ST-RAE": 0.9786172406976047, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5266499056216353, "R2": 0.6020019300310933, "ST-RAE": 0.49074937427017956, "n": 337}, "macro_ST-RAE": 0.7256852452415378}
+{"epoch": 11, "train_loss": 0.29772996738190005, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7469777183006951, "R2": 0.1578821080682734, "ST-RAE": 0.8986796163666715, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4516430401180549, "R2": 0.5351757461098643, "ST-RAE": 0.5586500614741128, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6047706770953996, "R2": 0.24699673008348377, "ST-RAE": 0.8604131632794105, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5279830769820006, "R2": 0.5795100866594531, "ST-RAE": 0.49677182279444226, "n": 337}, "macro_ST-RAE": 0.7036286659786593}
+{"epoch": 12, "train_loss": 0.26800069299548174, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.8069802134390148, "R2": 0.045540187621138206, "ST-RAE": 1.0456749738510251, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.46266793703351206, "R2": 0.4989617693337718, "ST-RAE": 0.5801451278073567, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6073523783549513, "R2": 0.2285062803331389, "ST-RAE": 0.8692878429193555, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5824789211649587, "R2": 0.5024507378096599, "ST-RAE": 0.5696773387028553, "n": 337}, "macro_ST-RAE": 0.7661963208201481}
+{"epoch": 13, "train_loss": 0.24940326272170674, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7133935174100521, "R2": 0.23130687184743604, "ST-RAE": 0.8626958173539593, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4481047703386061, "R2": 0.5189010941197081, "ST-RAE": 0.531584173174494, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6547266950057771, "R2": 0.13779435580899724, "ST-RAE": 0.9922897760578215, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5109342497673862, "R2": 0.5911029466810565, "ST-RAE": 0.4533507637616916, "n": 337}, "macro_ST-RAE": 0.7099801325869917}
+{"epoch": 14, "train_loss": 0.22963986536147588, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7647913293875878, "R2": 0.07765609687763197, "ST-RAE": 0.9140852936307182, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4722426468686682, "R2": 0.46448234149185796, "ST-RAE": 0.594599693625984, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6978733334806604, "R2": 0.07280177223699535, "ST-RAE": 1.0582955730371202, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5186085225659437, "R2": 0.5879146510671165, "ST-RAE": 0.4528846614500643, "n": 337}, "macro_ST-RAE": 0.7549663054359717}
+{"epoch": 15, "train_loss": 0.2101827713206064, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7334426767655611, "R2": 0.1315456248384239, "ST-RAE": 0.8917115393331684, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4601598524494664, "R2": 0.48974371811303086, "ST-RAE": 0.5536777114577659, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6334952428689713, "R2": 0.15687878642090902, "ST-RAE": 0.9219846471375183, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5302912300169041, "R2": 0.5644577608302594, "ST-RAE": 0.467194994001736, "n": 337}, "macro_ST-RAE": 0.7086422229825472}
+{"epoch": 16, "train_loss": 0.1939227420684045, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7506232848146746, "R2": 0.16574138933057325, "ST-RAE": 0.9397322623049126, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4358654507691896, "R2": 0.5385272593338297, "ST-RAE": 0.5053304250189591, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6305144762645646, "R2": 0.18394962074451382, "ST-RAE": 0.9125422656340346, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5354304053276712, "R2": 0.5721956337257406, "ST-RAE": 0.5080832877606127, "n": 337}, "macro_ST-RAE": 0.7164220601796297}
+{"epoch": 17, "train_loss": 0.18843569281229447, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.8122204908984015, "R2": 0.06812429609898885, "ST-RAE": 1.0697341543209096, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4913441519288055, "R2": 0.45632931143586064, "ST-RAE": 0.6802684684802227, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6290606966787863, "R2": 0.19069868677059587, "ST-RAE": 0.9161510238506264, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5206840419356757, "R2": 0.5898970569599151, "ST-RAE": 0.5008610745022686, "n": 337}, "macro_ST-RAE": 0.7917536802885068}
+{"epoch": 18, "train_loss": 0.18009796001817432, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7169584278092728, "R2": 0.17316319644457823, "ST-RAE": 0.859672672203301, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4563234486537472, "R2": 0.5446492192470667, "ST-RAE": 0.5423276996186752, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6095270875971155, "R2": 0.18706876500397285, "ST-RAE": 0.8724526442509025, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5323128696845439, "R2": 0.5831565297542907, "ST-RAE": 0.5023920173161776, "n": 337}, "macro_ST-RAE": 0.6942112583472642}
+{"epoch": 19, "train_loss": 0.16390552670299874, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7759754601940902, "R2": 0.12078006317030265, "ST-RAE": 0.9677760137437267, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.45464398370105275, "R2": 0.5377919415621885, "ST-RAE": 0.5082147863116913, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6050381013839399, "R2": 0.1957996577140897, "ST-RAE": 0.8632101074900094, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5332146565916813, "R2": 0.5747916700701302, "ST-RAE": 0.5043410255830508, "n": 337}, "macro_ST-RAE": 0.7108854832821195}
+{"epoch": 20, "train_loss": 0.1600707852055761, "CYP1A2_pIC50_direct_inhibition": {"MAE": 0.7208397036792223, "R2": 0.1744472949434699, "ST-RAE": 0.8817326587718984, "n": 210}, "CYP2C9_pIC50_direct_inhibition": {"MAE": 0.4929101063800855, "R2": 0.4917884897993673, "ST-RAE": 0.6531650245263153, "n": 209}, "CYP2D6_pIC50_direct_inhibition": {"MAE": 0.6030117915344091, "R2": 0.24572941822994354, "ST-RAE": 0.8590514575798696, "n": 230}, "CYP3A4_pIC50_direct_inhibition": {"MAE": 0.5855249516780958, "R2": 0.5146319602250586, "ST-RAE": 0.6029582124023296, "n": 337}, "macro_ST-RAE": 0.7492268383201033}
+Best epoch: 4
+Held-out test metrics: {'CYP1A2_pIC50_direct_inhibition': {'MAE': 0.617409777199144, 'R2': 0.2878256247787748, 'ST-RAE': 0.8206092598332451, 'n': 229}, 'CYP2C9_pIC50_direct_inhibition': {'MAE': 0.4527273280246398, 'R2': 0.3317422228850445, 'ST-RAE': 0.7099913929473458, 'n': 199}, 'CYP2D6_pIC50_direct_inhibition': {'MAE': 0.6183456961852191, 'R2': 0.08879241613557998, 'ST-RAE': 0.9495337627558327, 'n': 222}, 'CYP3A4_pIC50_direct_inhibition': {'MAE': 0.5600541682536968, 'R2': 0.5974395436550932, 'ST-RAE': 0.5127438761434755, 'n': 374}, 'macro_ST-RAE': 0.7482195729199748}
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 29875008: <cyp_finetune> in cluster <dcc> Done
+
+Job <cyp_finetune> was submitted from host <hpclogin1> by user <s261505> in cluster <dcc> at Mon Nov  2 19:08:13 2026
+Job was executed on host(s) <4*n-62-20-5>, in queue <gpuv100>, as user <s261505> in cluster <dcc> at Tue Nov  3 00:08:41 2026
+</zhome/57/7/231231> was used as the home directory.
+</zhome/57/7/231231/deep_learning_cyp> was used as the working directory.
+Started at Tue Nov  3 00:08:41 2026
+Terminated at Tue Nov  3 01:38:30 2026
+Results reported at Tue Nov  3 01:38:30 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q gpuv100
+#BSUB -J cyp_finetune
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=8GB]"
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -W 04:00
+#BSUB -o outputs/cyp_%J.out
+#BSUB -e outputs/cyp_%J.err
+set -euo pipefail
+
+# Choose the model and task at submission (LSF only passes variables given with -env):
+#   bsub -env "MODEL=morgan_mlp, TASK=classification" < finetune.sh
+# MODEL: atom_jepa | morgan_mlp | rdkit_mlp | morgan_rdkit_mlp | morgan_rdkit_lgbm (see conf/model/)
+# TASK: regression | classification
+# OVERRIDES: extra Hydra overrides separated by spaces, e.g. OVERRIDES="train.epochs=50"
+MODEL="${MODEL:-atom_jepa}"
+TASK="${TASK:-regression}"
+OVERRIDES="${OVERRIDES:-}"
+
+# Submit from the starter directory. Set up this venv BEFORE submitting.
+cd "${LS_SUBCWD:?Submit using bsub from the starter directory}"
+source "${CYP_VENV:-$PWD/.venv}/bin/activate"
+export OMP_NUM_THREADS=4
+export MKL_NUM_THREADS=4
+# Keep Hugging Face cache consistent with the pre-download command in README.
+export HF_HOME="${HF_HOME:-$PWD/.hf_cache}"
+[[ -f "conf/model/$MODEL.yaml" ]] || { echo "Unknown MODEL=$MODEL" >&2; exit 2; }
+case "$TASK" in regression|classification) ;; *) echo "Invalid TASK=$TASK" >&2; exit 2;; esac
+nvidia-smi
+python -c 'import torch; assert torch.cuda.is_available(), "CUDA-enabled PyTorch/GPU required"; print(torch.__version__, torch.version.cuda)'
+
+# Data must be prepared first with: bsub < prepare_data.sh
+for f in train val test; do
+    [[ -f "data/$TASK/$f.csv" ]] || { echo "Missing data/$TASK/$f.csv; run prepare_data.sh first" >&2; exit 2; }
+done
+# Results go to runs/<task>/<model>/<timestamp>/ (set in conf/config.yaml).
+python -u finetune.py model="$MODEL" task="$TASK" seed=42 device=cuda $OVERRIDES
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6551.00 sec.
+    Max Memory :                                 1458 MB
+    Average Memory :                             1360.55 MB
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               31310.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                17
+    Run time :                                   5389 sec.
+    Turnaround time :                            23417 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <outputs/cyp_29875008.err> for stderr output of this job.
+

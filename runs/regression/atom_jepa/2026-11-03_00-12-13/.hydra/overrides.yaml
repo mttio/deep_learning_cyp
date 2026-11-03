@@ -1,0 +1,4 @@
+- model=atom_jepa
+- task=regression
+- seed=42
+- device=cuda
